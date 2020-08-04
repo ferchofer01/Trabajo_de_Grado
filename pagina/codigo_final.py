@@ -141,19 +141,13 @@ def write_tweets(keyword, file):
                     df.at[i, 'retweet_count'] = status['retweet_count']
                 continue
             
-            #tweepy preprocessing called for basic preprocessing
             clean_text = p.clean(status['text'])
-
-            #call clean_tweet method for extra preprocessing
             filtered_tweet=clean_tweets(clean_text)
-
-            #pass textBlob method for sentiment calculations
-            blob = TextBlob(filtered_tweet)
+            a = TextBlob(filtered_tweet)
+            blob = a.translate(to='en')
             Sentiment = blob.sentiment
 
-            #seperate polarity and subjectivity in to two variables
             polarity = Sentiment.polarity
-			
             subjectivity = Sentiment.subjectivity
 
             #new entry append
