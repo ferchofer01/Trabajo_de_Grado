@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <h1>Resultados del analisis</h1>
+  <img src="{{url_for('static', filename='polarity.png')}}" />
+  <img src="{{url_for('static', filename='subjectivity.png')}}" />
+  
+  <a href="/"> Volver </a>
+  
+{% endblock %}
+
+

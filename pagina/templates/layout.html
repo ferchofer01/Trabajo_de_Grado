@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Analisis de sentimientos Medidas del Gobierno Coronavirus</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<header class="main-head">
+		<nav>
+			<h1 id="logo">Analisis de Sentimientos Cornavirus</h1>
+			<ul>
+				<li><a href="{{ url_for('inicio') }}">Posts</a></li>
+				<li><a href="{{ url_for('agregar') }}">Agregar</a></li>
+				<li><a href="{{ url_for('graficas') }}">Gaficas</a></li>
+				<li><a href="{{ url_for('consulta') }}">Consulta</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	{% block body %}
+	{% endblock %}
+</body>
+</html>
